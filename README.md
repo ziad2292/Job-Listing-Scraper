@@ -21,7 +21,7 @@ Although a **Python scraper** was developed to extract jobs from **LinkedIn**, s
 ## Installation & Setup
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/your-username/job-listings-app.git
+   git clone https://github.com/ziad2292/Job-Listing-Scraper
    cd job-listings-app
    ```
 
@@ -46,6 +46,4 @@ Scraping LinkedIn job postings requires special permissions. Unauthorized scrapi
 ## Contributing
 Feel free to contribute by improving the UI, adding new features, or suggesting better data-fetching methods.
 
-## License
-This project is open-source and available under the **MIT License**.
 

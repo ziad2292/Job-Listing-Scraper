@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background-color: #f3f2ef;
+}
+
+/* Header Section */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Removed extra padding */
+  background-color: white;
+}
+
+header img {
+  height: 50px;
+  margin: 0 10px;
+  padding: 4px;
+}
+
+/* Main Content */
+main {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Left Section (Filters & Buttons) */
+main > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 50%;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.filter-input-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid #004466;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100%;
+}
+
+.filter-input-container img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.filter-input-container input,
+.filter-input-container select {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+}
+
+/* Ensure default values are grey */
+select option[value=""][hidden] {
+  color: grey !important;
+}
+
+select {
+  cursor: pointer;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  max-width: 250px;
+  min-width: 150px;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+/* Search Button */
+button:first-of-type {
+  background-color: #005b8f;
+  color: white;
+  border: none;
+}
+
+button:first-of-type:hover {
+  background-color: #00406b;
+}
+
+/* Reset Button */
+button:last-of-type {
+  background-color: transparent;
+  border: 2px solid #005b8f;
+  color: #005b8f;
+}
+
+button:last-of-type:hover {
+  background-color: #005b8f;
+  color: white;
+}
+
+/* Right Section (Image) */
+main img {
+  width: clamp(200px, 40%, 400px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Styling for Input Field Titles */
+.filter-list p {
+  font-size: 24px; /* Adjust the text size */
+  font-weight: bold; /* Make the title bold */
+  color: #004466; /* Dark blue color for better visibility */
+  text-transform: capitalize; /* Capitalizes the first letter */
+}
+
+/* Job List Container */
+.job-list-container {
+  width: 100%; /* Or a specific width */
+  height: 60vh; /* Adjust based on your layout */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Add padding to prevent scrollbar overlap */
+  border: 2px solid #005b8f; /* Blue border */
+  border-radius: 10px;
+  background: white;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #005b8f transparent; /* Custom scrollbar color */
+}
+
+/* For WebKit browsers (Chrome, Edge, Safari) */
+.job-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.job-list-container::-webkit-scrollbar-thumb {
+  background: #005b8f; /* Blue scrollbar */
+  border-radius: 4px;
+}
+
+.job-list-container::-webkit-scrollbar-track {
+  background: transparent; /* Keeps the track invisible */
+}
+
+/* Job Card */
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* Space between job cards */
+}
+
+/* Job Header (Image + Title) */
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Job Icon */
+.job-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.job-card img {
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  object-fit: contain; /* Ensures the whole logo fits without cropping */
+  border-radius: 50%; /* Optional: Makes it circular if needed */
+}
+
+/* Job Title */
+.job-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Job Details */
+.job-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Job Meta (Company & Location) */
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Company Name */
+.company-name {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Job Location */
+.job-location {
+  color: #777;
+  font-size: 13px;
+}
+
+/* Visit Link */
+.visit-link {
+  cursor: pointer;
+  color: #005b8f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.visit-link:hover {
+  text-decoration: underline;
+}

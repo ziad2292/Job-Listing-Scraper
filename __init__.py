@@ -1,0 +1,1 @@
+from LinkedinScrapper import extract_jobs
